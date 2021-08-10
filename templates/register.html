@@ -1,0 +1,32 @@
+<style>
+    #fooo{
+        flex:grid;
+        background-color: grey;
+        flex-wrap: container;
+        width:40%;
+        margin: 8em  10em 8em 20em;
+        padding: 2em 0rem 2em 10rem;
+    }
+    #cf{
+        padding:1em 1em 1em 1em;
+        background-color: aqua;
+        cursor: pointer;
+        margin-left: 10em;
+    }
+</style>
+{%extends 'index.html'%}
+
+
+{%block cc%}
+<div id="fooo">
+<form action="register" method="post" >
+    {%csrf_token %}
+    <div><h3>Enter your First Name:   <input type="text" name='Firstname' placeholder="Your First Name" required></h3></div>
+    <div><h3>Enter your Last Name:     <input type="text" name='Lastname' placeholder="Your Last Name"></h3></div>
+    <div><h3>Enter your Email Address:  <input type="email" name='email' placeholder="abc@gmail.com" required></h3></div>
+    <div><h3>Enter your UserName:       <input type="text" name='username' placeholder="Your Username" required></h3></div>
+    <div><h3>Enter your Password:       <input type="password" name='password' placeholder="Type a strong password" required></h3></div>
+    <div><input type="submit" id="cf" name='Submit to register' text="submit to register"></div>
+</form>
+</div>
+{% endblock %}

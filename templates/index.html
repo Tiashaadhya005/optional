@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<style>
+    body{
+        background-color: aquamarine;
+        
+    }
+    #emni{
+        flex:content;
+        background-color: grey;
+        position: center;
+        width:70%;
+        height:  200%;
+        margin-left: 10%;
+        margin-top: 15%;
+        padding-left: 5em;
+        padding-bottom: 3rem;
+    }
+
+    
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Project-login page</title>
+</head>
+<body>
+    {% block cc%}
+    <div id="emni">
+    <p>
+        <div> <h1> HEY USER!!! </h1></div>
+        <div>
+            <h3> it is the home page</h3>
+        </div>
+        <div>
+            <h3> If you are not registered just <a href="/register" >Click here to register</a></h3>
+        </div>
+        <div>
+            <h3> If you are already registered please <a href ="/login" >Click here to login</a></h3>
+        </div>
+    </p>
+    </div>
+    {% endblock %}
+</body>
+</html>

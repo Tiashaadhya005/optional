@@ -1,0 +1,38 @@
+<style>
+    #fooo{
+        flex:grid;
+        background-color: grey;
+        flex-wrap: container;
+        width:40%;
+        margin: 10em  10em 10em 22em;
+        padding-left: 10rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    #cf{
+        padding:1em 1em 1em 1em;
+        background-color: aqua;
+        cursor: pointer;
+        margin-left: 10em;
+    }
+</style>
+{%extends 'index.html'%}
+
+
+{%block cc%}
+<div id="fooo"> 
+<form action="login" method="post" >
+    {%csrf_token %}
+    <div><h3>Enter your Username:   <input type="text" name="Username" placeholder="Your userame" required></h3></div>
+    <div><h3>Enter your Password:     <input type="password" name="Password" placeholder="Password"></h3></div>
+    <div><input type="submit" id="cf" name="Login"></div>
+
+</form>
+<div>
+    {% for m in messages %}
+    <h1>{{m}}</h1>
+    {% endfor %}
+</div>
+
+</div>
+{% endblock %}
